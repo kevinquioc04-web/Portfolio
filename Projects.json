@@ -1,0 +1,66 @@
+document.addEventListener("DOMContentLoaded", () => {
+    const modal = document.getElementById("videoModal");
+    const introBtn = document.getElementById("introBtn");
+    const closeBtn = document.querySelector(".close-modal");
+    const introFrame = document.getElementById("introFrame");
+    const backToTopBtn = document.getElementById("backToTop");
+    const form = document.getElementById("contact-form");
+    const status = document.getElementById("form-status");
+
+    const driveEmbedLink = "https://drive.google.com/file/d/1DncysXNq2VQGRpwKb7Wa5fgX8wcoFoAr/preview";
+
+    // OPEN VIDEO MODAL
+    if (introBtn) {
+        introBtn.onclick = function(e) {
+            e.preventDefault();
+            modal.style.display = "block";
+            introFrame.src = driveEmbedLink;
+        };
+    }
+
+    const closeModal = () => {
+        modal.style.display = "none";
+        introFrame.src = "";
+    };
+
+    if (closeBtn) closeBtn.onclick = closeModal;
+    window.onclick = (event) => { if (event.target == modal) closeModal(); };
+
+    // FORM SUBMISSION (AJAX)
+    if (form) {
+        form.addEventListener("submit", async function(event) {
+            event.preventDefault();
+            status.innerHTML = "Sending...";
+            status.style.color = "var(--text-dark)";
+
+            const data = new FormData(event.target);
+            fetch(event.target.action, {
+                method: form.method,
+                body: data,
+                headers: { 'Accept': 'application/json' }
+            }).then(response => {
+                if (response.ok) {
+                    status.innerHTML = "Thanks! Your message has been sent.";
+                    status.style.color = "var(--accent)";
+                    form.reset();
+                } else {
+                    status.innerHTML = "Oops! There was a problem submitting your form.";
+                    status.style.color = "red";
+                }
+            }).catch(error => {
+                status.innerHTML = "Oops! There was a problem submitting your form.";
+                status.style.color = "red";
+            });
+        });
+    }
+
+    // BACK TO TOP
+    window.onscroll = function() {
+        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+            backToTopBtn.style.display = "flex";
+        } else {
+            backToTopBtn.style.display = "none";
+        }
+    };
+    backToTopBtn.onclick = () => { window.scrollTo({ top: 0, behavior: "smooth" }); };
+});

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Dashboard Case Study | Kevin Quioc</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="project-body">
+
+    <header class="project-header">
+        <a href="index.html" class="back-link">
+            <i class="fa-solid fa-arrow-left"></i> Back to Portfolio
+        </a>
+        <a href="index.html#contact" class="btn header-btn project-contact-btn" data-tooltip="Get In Touch">
+            <i class="fa-solid fa-envelope"></i>
+        </a>
+    </header>
+
+    <section class="project-page-hero">
+        <div class="project-hero-content">
+            <h1 class="animate-slide-in">Real-Time Operational Dashboard</h1>
+            <div class="project-tools-tags">
+                <span>Looker Studio</span>
+                <span>Five9</span>
+                <span>Assembled</span>
+                <span>API Integration</span>
+            </div>
+            <p>An automated pipeline tracking agent occupancy and service levels in real-time, eliminating manual reporting.</p>
+        </div>
+    </section>
+
+    <section class="project-page-content">
+
+        <div class="content-block">
+            <h3><i class="fa-solid fa-circle-play" style="color: var(--accent);"></i> Project Overview</h3>
+            
+            <div style="margin-top: 1rem; border-radius: 8px; overflow: hidden; box-shadow: var(--shadow); border: 1px solid #e5e7eb; background: #000;">
+                <video id="overviewVideo" controls autoplay muted style="width: 100%; display: block;">
+                    <source src="Summary Per Interval Report March 1 2026.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            
+            <p style="font-size: 0.85rem; color: var(--text-light); font-style: italic; margin-top: 0.8rem; text-align: center; line-height: 1.5;">
+                *This is just an example data to show that the dashboard is working.<br>
+                **The data was extracted manually on Assembled to change the personal information.
+            </p>
+        </div>
+        
+        <div class="content-block">
+            <h3><i class="fa-solid fa-triangle-exclamation" style="color: var(--accent);"></i> The Problem</h3>
+            <p>At IntouchCX, operations teams were spending over <strong>15 hours per week</strong> manually downloading CSV files from Five9 (our telephony system) and Assembled (our workforce management system). By the time the data was aggregated in Excel to check agent occupancy and Service Level Agreements (SLAs), the information was already outdated. This lag prevented leadership from making rapid, intra-day staffing adjustments during unexpected peak call volumes.</p>
+        </div>
+
+        <div class="content-block">
+            <h3><i class="fa-solid fa-diagram-project" style="color: var(--accent);"></i> Data Architecture & Workflow</h3>
+            <p>To eliminate the manual downloads, I designed an automated data pipeline. By utilizing APIs, the raw telephony and scheduling data is extracted, transformed to ensure matching primary keys (Agent IDs), and loaded into a centralized structure before being visualized in Looker Studio.</p>
+            
+            <div style="margin: 2rem 0; border-radius: 8px; overflow: hidden; box-shadow: var(--shadow); border: 1px solid #e5e7eb; padding: 2rem; text-align: center; background: var(--bg-text); color: var(--text-light);">
+                <em>[Placeholder: Insert Looker Studio Dashboard Screenshot Here]</em>
+            </div>
+            
+        </div>
+
+        <div class="content-block">
+            <h3><i class="fa-solid fa-lightbulb" style="color: var(--accent);"></i> The Solution</h3>
+            <p>I developed a dynamic, interactive dashboard using <strong>Looker Studio</strong> tailored specifically for non-technical stakeholders (Team Leads and Operations Managers). Key features included:</p>
+            <ul>
+                <li><strong>Real-Time Refresh:</strong> Connected live data feeds to ensure metrics were never more than 5 minutes old.</li>
+                <li><strong>Unified Metrics:</strong> Blended Five9 call data (Handle Time, Wait Time) with Assembled scheduling data (Scheduled vs. Actual Adherence) to create a single source of truth.</li>
+                <li><strong>Threshold Alerts:</strong> Implemented conditional formatting to highlight when service levels dropped below 80% or when agent shrinkage exceeded acceptable limits.</li>
+            </ul>
+        </div>
+
+        <div class="content-block impact-block">
+            <h3><i class="fa-solid fa-chart-line" style="color: var(--accent);"></i> The Impact & Results</h3>
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <h4>100%</h4>
+                    <p>Reduction in manual reporting time (Saved ~15 hours/week)</p>
+                </div>
+                <div class="metric-card">
+                    <h4>+12%</h4>
+                    <p>Increase in Service Level Consistency via rapid staffing responses</p>
+                </div>
+                <div class="metric-card">
+                    <h4>Zero</h4>
+                    <p>Data lag for leadership decision-making during peak hours</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="next-steps text-center" style="margin-top: 4rem; text-align: center;">
+            <a href="index.html" class="btn">Return to Home</a>
+        </div>
+
+    </section>
+
+    <script src="script.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const video = document.getElementById("overviewVideo");
+            if (video) {
+                // Set the playback speed to 2.5x
+                video.playbackRate = 2.5;
+            }
+        });
+    </script>
+
+</body>
+</html>

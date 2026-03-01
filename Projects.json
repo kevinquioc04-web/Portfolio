@@ -9,8 +9,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const driveEmbedLink = "https://drive.google.com/file/d/1DncysXNq2VQGRpwKb7Wa5fgX8wcoFoAr/preview";
 
-    // OPEN VIDEO MODAL
-    if (introBtn) {
+    // VIDEO MODAL (Only triggers if elements are present on the page)
+    if (introBtn && modal) {
         introBtn.onclick = function(e) {
             e.preventDefault();
             modal.style.display = "block";
@@ -19,12 +19,18 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     const closeModal = () => {
-        modal.style.display = "none";
-        introFrame.src = "";
+        if (modal) {
+            modal.style.display = "none";
+            introFrame.src = "";
+        }
     };
 
     if (closeBtn) closeBtn.onclick = closeModal;
-    window.onclick = (event) => { if (event.target == modal) closeModal(); };
+    window.onclick = (event) => { 
+        if (event.target == modal) {
+            closeModal();
+        }
+    };
 
     // FORM SUBMISSION (AJAX)
     if (form) {
@@ -56,11 +62,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // BACK TO TOP
     window.onscroll = function() {
-        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-            backToTopBtn.style.display = "flex";
-        } else {
-            backToTopBtn.style.display = "none";
+        if (backToTopBtn) {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                backToTopBtn.style.display = "flex";
+            } else {
+                backToTopBtn.style.display = "none";
+            }
         }
     };
-    backToTopBtn.onclick = () => { window.scrollTo({ top: 0, behavior: "smooth" }); };
+    
+    if (backToTopBtn) {
+        backToTopBtn.onclick = () => { 
+            window.scrollTo({ top: 0, behavior: "smooth" }); 
+        };
+    }
 });

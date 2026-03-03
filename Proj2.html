@@ -1,26 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"><title>Startup Inventory Database | Kevin Quioc</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notion Task Tracker | Kevin Quioc</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <header style="background: var(--btn-color); position: relative; padding: 1rem 10%;">
-        <a href="index.html" style="color: white; font-weight: 700;">← Back to Home</a>
+<body class="project-body">
+
+    <header class="project-header">
+        <a href="index.html" class="back-link">
+            <i class="fa-solid fa-arrow-left"></i> Back to Portfolio
+        </a>
+        <a href="index.html#contact" class="btn header-btn project-contact-btn" data-tooltip="Get In Touch">
+            <i class="fa-solid fa-envelope"></i>
+        </a>
     </header>
-    <section class="project-page-hero" style="background: #3a3a5e;">
-        <h1>Startup Inventory & Sales Database</h1>
-        <p>Excel • SQL • Notion</p>
+
+    <section class="project-page-hero">
+        <div class="project-hero-content">
+            <h1 class="animate-slide-in">Notion Task Tracker</h1>
+            <div class="project-tools-tags">
+                <span>Notion</span>
+                <span>Make.com</span>
+            </div>
+            <p>Developed an automated task management and workflow tracker in Notion to streamline daily operations and team collaboration.</p>
+        </div>
     </section>
-    <div class="project-page-content">
-        <h3>The Problem</h3>
-        <p>A growing startup was tracking sales on paper and disconnected spreadsheets, causing frequent stock-outs and unknown profit margins.</p>
-        <h3>The Solution</h3>
-        <p>I built a relational database system using SQL logic within Excel to track inventory movement against daily sales. I then integrated a Notion front-end for the warehouse team to update stock levels easily via mobile.</p>
-        <h3>The Result</h3>
-        <p>Achieved 100% inventory accuracy and provided the founder with a YTD growth dashboard that helped secure their next round of micro-funding.</p>
-        <a href="index.html" class="btn back-home">Return to Portfolio</a>
-    </div>
+
+    <section class="project-page-content">
+
+        <div class="content-block">
+            <h3><i class="fa-solid fa-circle-play" style="color: var(--accent);"></i> Project Overview</h3>
+            
+            <div style="margin-top: 1rem; border-radius: 8px; overflow: hidden; box-shadow: var(--shadow); border: 1px solid #e5e7eb; background: #000;">
+                <video id="overviewVideo" controls autoplay muted loop style="width: 100%; display: block;">
+                    <source src="Notion_Demo.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            
+            <p style="font-size: 0.85rem; color: var(--text-light); font-style: italic; margin-top: 0.8rem; text-align: center; line-height: 1.5;">
+                *Sample demonstration of the Notion Task Tracker interface and workflow.
+            </p>
+        </div>
+
+        <div class="content-block">
+            <h3><i class="fa-solid fa-triangle-exclamation" style="color: var(--accent);"></i> The Problem</h3>
+            <p>Many processes are very tedious when it comes to updating trackers and files, and it requires a lot of effort to manage everything all at once.</p>
+        </div>
+
+        <div class="content-block">
+            <h3><i class="fa-solid fa-lightbulb" style="color: var(--accent);"></i> The Solution</h3>
+            <p>I built a Notion Task Tracker to efficiently monitor all necessary tasks. Team members can simply click on a task to assign it to themselves and provide regular progress updates using a percentage-based completion scale.</p>
+        </div>
+
+        <div class="content-block impact-block">
+            <h3><i class="fa-solid fa-chart-line" style="color: var(--accent);"></i> The Result</h3>
+            <p>The team's overall efficiency improved significantly. The tracker eliminated redundant work, ensuring no two teammates accidentally tackled the same assignment. When collaboration was necessary, members could easily co-assign themselves to a task, providing complete visibility into who was working together on specific items.</p>
+            
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <h4>Zero</h4>
+                    <p>Overlapping Tasks</p>
+                </div>
+                <div class="metric-card">
+                    <h4>Seamless</h4>
+                    <p>Team Collaboration</p>
+                </div>
+                <div class="metric-card">
+                    <h4>100%</h4>
+                    <p>Task Visibility</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="next-steps text-center" style="margin-top: 4rem; text-align: center;">
+            <a href="index.html" class="btn">Return to Home</a>
+        </div>
+
+    </section>
+
+    <script src="script.js"></script>
+
 </body>
 </html>

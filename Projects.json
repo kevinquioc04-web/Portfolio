@@ -61,19 +61,20 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // BACK TO TOP
-    window.onscroll = function() {
-        if (backToTopBtn) {
-            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+    if (backToTopBtn) {
+        // Use modern scroll event listener
+        window.addEventListener("scroll", () => {
+            // Button appears after scrolling down 300px
+            if (window.scrollY > 300) {
                 backToTopBtn.style.display = "flex";
             } else {
                 backToTopBtn.style.display = "none";
             }
-        }
-    };
-    
-    if (backToTopBtn) {
-        backToTopBtn.onclick = () => { 
-            window.scrollTo({ top: 0, behavior: "smooth" }); 
-        };
+        });
+        
+        // Smooth scroll to top on click
+        backToTopBtn.addEventListener("click", () => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
     }
 });

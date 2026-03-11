@@ -11,7 +11,9 @@
 <body>
 
     <header>
-        <img src="KQ_Logo.svg" alt="KQ Logo" class="logo">
+        <a href="index.html">
+            <img src="Logo.png" alt="Kevin Quioc Logo" class="logo">
+        </a>
         
         <div class="header-actions">
             <a href="https://www.linkedin.com/in/kevinquioc" target="_blank" class="btn header-btn" data-tooltip="LinkedIn Profile">
@@ -22,7 +24,7 @@
                 <i class="fa-brands fa-github"></i>
             </a>
             <div class="header-divider"></div>
-            <a href="Kevin_Quioc_Resume.pdf" target="_blank" class="btn header-btn" data-tooltip="Resume">
+            <a href="Kevin_Quioc_Resume_Data_Analyst.pdf" target="_blank" class="btn header-btn" data-tooltip="Resume">
                 <i class="fa-solid fa-file-lines"></i>
             </a>
             <div class="header-divider"></div>
@@ -35,21 +37,21 @@
     <section id="hero">
         <div class="hero-grid">
             <div class="hero-text">
-                <img src="Kevin_Quioc_Profile_Picture.jpg" alt="Kevin Quioc" class="profile-pic">
+                <img src="Kevin_Quioc_Profile_Photo.png" alt="Kevin Quioc" class="profile-pic">
                 <h1>Kevin Quioc</h1>
                 <h2 class="tech-subtitle">Data Analyst</h2>
                 <p class="animate-slide-in">Turning complex data into actionable insights.</p>
-                <a href="#projects" class="btn">View My Work</a>
+                <a href="#portfolio-skills" class="btn">View My Work</a>
             </div>
 
             <div class="hero-about">
                 <div class="hero-about-content">
-                    <p>I am a <span class="highlight">Data Analyst</span> with over five years of experience transforming raw data into clear, actionable insights. I specialize in <span class="highlight">Excel, Looker Studio, Salesforce, Assembled, and Five9</span>, using these tools to build reports and interactive dashboards that empower teams to make informed decisions.</p>
-                    <p>Currently, I work as a <span class="highlight">Real-Time Analyst at IntouchCX</span>, where I design ad hoc dashboards that help non-technical stakeholders easily interpret CRM and scheduling data, turning historical trends into strategic actions.</p>
-                    <p>I am <span class="highlight">proactive and solutions-driven</span>, consistently bringing forward ideas that improve efficiency, streamline workflows, and save time — allowing teams to focus on optimizing and strengthening the systems that drive the business forward.</p>
+                    <h3 style="font-size: 1.5em; margin-bottom: 15px; color: #ffffff; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">Data is only as valuable as the decisions it inspires.</h3>
+                    <p>As a <span class="highlight">Real-Time and Data Analyst</span>, I specialize in the "Last Mile" of analytics: translating complex operational metrics into clear, visual stories that stakeholders actually want to read. I believe that a dashboard shouldn’t just show what happened—it should show what to do next.</p>
+                    <p>My approach is simple: strip away the noise and highlight the insights that drive growth. Whether I’m architecting automated <span class="highlight">Looker Studio</span> reports or optimizing complex logic in <span class="highlight">Google Sheets</span>, my goal is to bridge the gap between raw data and <span class="highlight">executive action</span>. I don’t just deliver spreadsheets; I deliver <span class="highlight">clarity</span>.</p>
                     
                     <div class="skills-list" style="margin-top: 1.2rem;">
-                        <span>Excel</span><span>Looker Studio</span><span>Salesforce</span><span>Assembled</span><span>Five9</span><span>IEX</span><span>Notion</span><span>Zendesk</span><span>Phoenix Code</span>
+                        <span>Excel</span><span>Google Sheets</span><span>Looker Studio</span><span>Salesforce</span><span>Assembled</span><span>Five9</span><span>IEX</span><span>Notion</span><span>Zendesk</span>
                     </div>
                 </div>
             </div>
@@ -81,60 +83,135 @@
         </div>
     </section>
 
-    <section id="projects" class="section-padding">
-        <h2 class="section-title">Featured Projects</h2>
-        <div class="projects-grid">
-            <div class="project-card">
-                <h3>Real-Time Operational Dashboard</h3>
-                <div class="project-tools"><span>Looker Studio</span><span>Five9</span><span>Assembled</span></div>
-                <p>Engineered an automated dashboard for IntouchCX that tracks agent occupancy and service levels in real-time.</p>
-                <a href="Proj1.html" class="btn project-btn">View Case Study</a>
+    <section id="portfolio-skills" class="section-padding">
+        <div class="split-layout">
+            
+            <div class="projects-column">
+                <h2 class="section-title text-left dark-title">Featured Projects</h2>
+                
+                <div class="projects-grid">
+                    
+                    <a href="Proj1.html" class="video-thumbnail-card">
+                        <div class="thumbnail-wrapper">
+                            <img src="Excel Dashboard Thumbnail.jpg" alt="Real-Time Operational Dashboard" class="project-thumbnail">
+                            <div class="play-icon-overlay">
+                                <i class="fa-solid fa-play" style="margin-left: 5px;"></i>
+                            </div>
+                            <div class="project-tools-overlay">
+                                <span>Looker Studio</span><span>Five9</span><span>Assembled</span>
+                            </div>
+                        </div>
+                        <h3 class="project-title-caption">Real-Time Operational Dashboard</h3>
+                    </a>
+
+                    <a href="Proj2.html" class="video-thumbnail-card">
+                        <div class="thumbnail-wrapper">
+                            <img src="Notion_Dashboard_Thumbnail.png" alt="Notion Task Tracker" class="project-thumbnail">
+                            <div class="play-icon-overlay">
+                                <i class="fa-solid fa-play" style="margin-left: 5px;"></i>
+                            </div>
+                            <div class="project-tools-overlay">
+                                <span>Notion</span><span>Make.com</span>
+                            </div>
+                        </div>
+                        <h3 class="project-title-caption">Notion Task Tracker</h3>
+                    </a>
+
+                    <a href="project3.html" class="video-thumbnail-card">
+                        <div class="thumbnail-wrapper">
+                            <img src="Looker Studio Thumbnail.jpg" alt="Looker Studio Dashboard" class="project-thumbnail">
+                            <div class="play-icon-overlay">
+                                <i class="fa-solid fa-play" style="margin-left: 5px;"></i>
+                            </div>
+                            <div class="project-tools-overlay">
+                                <span>Looker Studio</span>
+                            </div>
+                        </div>
+                        <h3 class="project-title-caption">Looker Studio Dashboard</h3>
+                    </a>
+
+                    <a href="project4.html" class="video-thumbnail-card">
+                        <div class="thumbnail-wrapper">
+                            <img src="Heatmap_Thumbnail.png" alt="Heatmap" class="project-thumbnail">
+                            <div class="play-icon-overlay">
+                                <i class="fa-solid fa-play" style="margin-left: 5px;"></i>
+                            </div>
+                            <div class="project-tools-overlay">
+                                <span>Excel</span>
+                            </div>
+                        </div>
+                        <h3 class="project-title-caption">Heatmap</h3>
+                    </a>
+                </div>
             </div>
 
-            <div class="project-card">
-                <h3>Notion Task Tracker</h3>
-                <div class="project-tools"><span>Notion</span><span>Make.com</span></div>
-                <p>Developed an automated task management and workflow tracker in Notion to streamline daily operations and team collaboration.</p>
-                <a href="Proj2.html" class="btn project-btn">View Case Study</a>
+            <div class="skills-column">
+                <h2 class="section-title text-left dark-title">Skills</h2>
+                <div class="skills-container">
+                    <div class="skill-item">
+                        <i class="fa-solid fa-file-excel main-icon"></i><span class="skill-name">Excel</span>
+                        <div class="skill-stars">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fa-solid fa-broom main-icon"></i><span class="skill-name">Data Cleaning</span>
+                        <div class="skill-stars">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fa-solid fa-chart-pie main-icon"></i><span class="skill-name">Data Viz</span>
+                        <div class="skill-stars">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fa-solid fa-clipboard-list main-icon"></i><span class="skill-name">Organizational Skills</span>
+                        <div class="skill-stars">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fa-solid fa-database main-icon"></i><span class="skill-name">Data Gathering</span>
+                        <div class="skill-stars">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fa-solid fa-book-open main-icon"></i><span class="skill-name">Data Story Telling</span>
+                        <div class="skill-stars">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-            <div class="project-card">
-                <h3>CRM Workflow Optimization</h3>
-                <div class="project-tools"><span>Salesforce</span><span>Zendesk</span><span>Make.com</span></div>
-                <p>Automated ticket categorization and data flow between Zendesk and Salesforce for non-technical stakeholders.</p>
-                <a href="project3.html" class="btn project-btn">View Case Study</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="skills" class="section-padding">
-        <h2 class="section-title">Technical Arsenal</h2>
-        <div class="skills-container">
-            <div class="skill-item"><i class="fa-solid fa-database"></i><span>SQL Databases</span></div>
-            <div class="skill-item"><i class="fa-brands fa-python"></i><span>Python</span></div>
-            <div class="skill-item"><i class="fa-solid fa-chart-pie"></i><span>Data Viz</span></div>
-            <div class="skill-item"><i class="fa-solid fa-file-excel"></i><span>Excel</span></div>
-            <div class="skill-item"><i class="fa-solid fa-server"></i><span>ETL Pipelines</span></div>
-            <div class="skill-item"><i class="fa-solid fa-chart-line"></i><span>Statistics</span></div>
         </div>
     </section>
 
     <section id="contact" class="section-padding">
-        <h2 class="section-title">Get In Touch</h2>
-        <div class="contact-wrapper">
-            <div class="contact-info">
-                <a href="mailto:kevin.quioc04@gmail.com" class="contact-link"><i class="fa-solid fa-envelope"></i><span>kevin.quioc04@gmail.com</span></a>
-                <a href="https://linkedin.com/in/kevinquioc" target="_blank" class="contact-link"><i class="fa-brands fa-linkedin"></i><span>LinkedIn Profile</span></a>
-                <a href="https://github.com/kevinquioc04-web" target="_blank" class="contact-link"><i class="fa-brands fa-github"></i><span>GitHub Profile</span></a>
-            </div>
-            
-            <form id="contact-form" action="https://formspree.io/f/mbdaeojo" method="POST" class="contact-form">
+        <h2 class="section-title" style="text-align: center;">Get In Touch</h2>
+        <div class="contact-wrapper-custom">
+            <form id="contact-form" action="https://formspree.io/f/mbdaeojo" method="POST" class="contact-form-custom">
                 <input type="text" name="name" placeholder="Name" required>
                 <input type="email" name="email" placeholder="Email" required>
-                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
                 <button type="submit" class="btn">Send Message</button>
-                <p id="form-status" style="margin-top: 15px; font-weight: 600; text-align: center;"></p>
+                <p id="form-status" style="margin-top: 15px; font-weight: 600; text-align: center; font-size: 14px;"></p>
             </form>
+            <div class="contact-info-custom">
+                <a href="mailto:kevin.quioc04@gmail.com" class="contact-link contact-link-custom">
+                    <i class="fa-solid fa-envelope"></i><span>kevin.quioc04@gmail.com</span>
+                </a>
+                <div class="contact-divider-custom"></div>
+                <a href="https://linkedin.com/in/kevinquioc" target="_blank" class="contact-link contact-link-custom">
+                    <i class="fa-brands fa-linkedin"></i><span>LinkedIn</span>
+                </a>
+                <div class="contact-divider-custom"></div>
+                <a href="https://github.com/kevinquioc04-web" target="_blank" class="contact-link contact-link-custom">
+                    <i class="fa-brands fa-github"></i><span>GitHub</span>
+                </a>
+            </div>
         </div>
     </section>
 
@@ -142,7 +219,7 @@
         <div class="modal-content">
             <span class="close-modal">&times;</span>
             <div class="video-container">
-                <iframe id="introFrame" src="" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                <iframe id="introFrame" title="Kevin Quioc Introduction Video" src="about:blank" allow="autoplay; fullscreen" allowfullscreen style="border: none;"></iframe>
             </div>
         </div>
     </div>

@@ -35,43 +35,37 @@
     <section class="project-page-content">
 
         <div class="content-block">
-            <h3><i class="fa-solid fa-circle-play" style="color: var(--accent);"></i> Project Overview</h3>
+            <h3><i class="fa-solid fa-circle-info" style="color: var(--accent);"></i> Project Overview</h3>
             
-            <div style="margin-top: 1rem; border-radius: 8px; overflow: hidden; box-shadow: var(--shadow); border: 1px solid #e5e7eb; background: #000;">
-                <video id="overviewVideo" controls autoplay muted style="width: 100%; display: block;">
-                    <source src="Summary Per Interval Report March 1 2026.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
+            <div style="margin: 2rem 0; border-radius: 12px; height: 300px; display: flex; flex-direction: column; justify-content: center; align-items: center; background: #1f2937; border: 2px dashed #374151; color: #6ae5c1; text-align: center; gap: 1rem;">
+                <i class="fa-solid fa-file-excel" style="font-size: 5rem;"></i>
+                <p style="font-family: 'Roboto Mono', monospace; font-size: 0.9rem; color: #9ca3af;">[ Excel Dashboard Placeholder ]</p>
             </div>
-            
-            <p style="font-size: 0.85rem; color: var(--text-light); font-style: italic; margin-top: 0.8rem; text-align: center; line-height: 1.5;">
-                *This is just an example data to show that the dashboard is working.<br>
-                **The data was extracted manually on Assembled to change the personal information.
-            </p>
+
+            <p>At IntouchCX, I designed and implemented a centralized operational hub that bridged the gap between telephony data and workforce management. By automating the flow of information, we transformed how leadership interacted with intraday performance metrics.</p>
         </div>
         
         <div class="content-block">
             <h3><i class="fa-solid fa-triangle-exclamation" style="color: var(--accent);"></i> The Problem</h3>
-            <p>At IntouchCX, operations teams were spending over <strong>15 hours per week</strong> manually downloading CSV files from Five9 (our telephony system) and Assembled (our workforce management system). By the time the data was aggregated in Excel to check agent occupancy and Service Level Agreements (SLAs), the information was already outdated. This lag prevented leadership from making rapid, intra-day staffing adjustments during unexpected peak call volumes.</p>
+            <p>Operations teams were spending over <strong>15 hours per week</strong> manually downloading CSV files from Five9 and Assembled. By the time the data was aggregated in Excel to check agent occupancy and Service Level Agreements (SLAs), the information was already outdated. This lag prevented leadership from making rapid, intra-day staffing adjustments during unexpected peak call volumes.</p>
         </div>
 
         <div class="content-block">
             <h3><i class="fa-solid fa-diagram-project" style="color: var(--accent);"></i> Data Architecture & Workflow</h3>
-            <p>To eliminate the manual downloads, I designed an automated data pipeline. By utilizing APIs, the raw telephony and scheduling data is extracted, transformed to ensure matching primary keys (Agent IDs), and loaded into a centralized structure before being visualized in Looker Studio.</p>
+            <p>To eliminate manual downloads, I designed an automated data pipeline. By utilizing APIs, raw telephony and scheduling data is extracted, transformed to ensure matching Agent IDs, and loaded into a centralized structure visualized in Looker Studio.</p>
             
-            <div style="margin: 2rem 0; border-radius: 8px; overflow: hidden; box-shadow: var(--shadow); border: 1px solid #e5e7eb; padding: 2rem; text-align: center; background: var(--bg-text); color: var(--text-light);">
-                <em>[Placeholder: Insert Looker Studio Dashboard Screenshot Here]</em>
+            <div style="margin: 2rem 0; border-radius: 12px; overflow: hidden; box-shadow: var(--shadow); border: 1px solid #374151; background: #1f2937; text-align: center;">
+                <img src="Excel Dashboard Thumbnail.jpg" alt="Looker Studio Dashboard View" style="width: 100%; height: auto; display: block;">
             </div>
-            
         </div>
 
         <div class="content-block">
             <h3><i class="fa-solid fa-lightbulb" style="color: var(--accent);"></i> The Solution</h3>
-            <p>I developed a dynamic, interactive dashboard using <strong>Looker Studio</strong> tailored specifically for non-technical stakeholders (Team Leads and Operations Managers). Key features included:</p>
+            <p>I developed a dynamic, interactive dashboard using <strong>Looker Studio</strong> tailored for Operations Managers. Key features included:</p>
             <ul>
-                <li><strong>Real-Time Refresh:</strong> Connected live data feeds to ensure metrics were never more than 5 minutes old.</li>
-                <li><strong>Unified Metrics:</strong> Blended Five9 call data (Handle Time, Wait Time) with Assembled scheduling data (Scheduled vs. Actual Adherence) to create a single source of truth.</li>
-                <li><strong>Threshold Alerts:</strong> Implemented conditional formatting to highlight when service levels dropped below 80% or when agent shrinkage exceeded acceptable limits.</li>
+                <li><strong>Real-Time Refresh:</strong> Metrics are updated every 5 minutes via live data connectors.</li>
+                <li><strong>Unified Metrics:</strong> Blended Handle Time and Wait Time data with Scheduled vs. Actual Adherence.</li>
+                <li><strong>Threshold Alerts:</strong> Conditional formatting highlights when service levels drop below 80%.</li>
             </ul>
         </div>
 
@@ -84,7 +78,7 @@
                 </div>
                 <div class="metric-card">
                     <h4>+12%</h4>
-                    <p>Increase in Service Level Consistency via rapid staffing responses</p>
+                    <p>Increase in Service Level Consistency</p>
                 </div>
                 <div class="metric-card">
                     <h4>Zero</h4>
@@ -100,16 +94,6 @@
     </section>
 
     <script src="script.js"></script>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const video = document.getElementById("overviewVideo");
-            if (video) {
-                // Set the playback speed to 2.5x
-                video.playbackRate = 2.5;
-            }
-        });
-    </script>
 
 </body>
 </html>
